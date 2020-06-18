@@ -4,6 +4,8 @@ import { Route } from 'react-router-dom'
 import Question from './Question'
 import Answers from './Answers'
 
+import questions from '../../data/questionData'
+
 const Game = () => {
   return (
     <>
