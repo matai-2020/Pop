@@ -39,25 +39,26 @@ const quiz = [
     {
         id: 7,
         question: 'What placeholder would you use for a Handlebars template ?',
-        answers:['{{{body}}}','mustache','{}','layout'],
-        answer:'{{{body}}}'
+        answers: ['{{{body}}}', 'mustache', '{}', 'layout'],
+        answer: '{{{body}}}'
     },
-   
+
     {
         id: 8,
-        question:'Which of these is not a Knex.js join method?',
-        answers:['innerJoin','crossJoin','leftJoin','overJoin'],
-        answer:'overJoin'
+        question: 'Which of these is not a Knex.js join method?',
+        answers: ['innerJoin', 'crossJoin', 'leftJoin', 'overJoin'],
+        answer: 'overJoin'
     },
     {
         id: 9,
         question: 'What is not normally included in the Test Driven Development (TDD) approach?',
-        answers:['green','red','refactor','rewire']
+        answers: ['green', 'red', 'refactor', 'rewire'],
+        answer: 'rewire'
     },
     {
         id: 10,
         question: 'In React.js, what is the shorthand syntax for <React.Fragment></React.Fragment>?',
-        answers:['<div></div>','<></>','<>','{}'],
-        answer:'<></>'
+        answers: ['<div></div>', '<></>', '<>', '{}'],
+        answer: '<></>'
     },
 ]
