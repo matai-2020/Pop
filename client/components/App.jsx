@@ -17,7 +17,7 @@ class App extends React.Component {
           <Route path="/" render={() => {
             return (
               <>
-              <Game data={questionsData}/>
+                <Game data={questionsData} />
               </>
             )
           }} />
@@ -25,7 +25,6 @@ class App extends React.Component {
       </Router>
     )
   }
-
 }
 
 export default App
