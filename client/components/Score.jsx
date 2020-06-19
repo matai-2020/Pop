@@ -19,7 +19,6 @@ class Score extends React.Component {
     return (
       <div>
         <div style={ this.state.style }> <h2>$1,000,000.00</h2> </div>
-
         <h3>$500,000.00</h3>
         <h3>$250,000.00</h3>
         <h3>$125,000.00</h3>
