@@ -1,4 +1,4 @@
-export const quiz = [
+export default [
   {
     id: 1,
     question: 'What is the most common version control system used by software teams to manage changes to source code over time?',

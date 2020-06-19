@@ -1,18 +1,30 @@
 import React from 'react'
-import { Route } from 'react-router-dom'
+import {
+  HashRouter as Router,
+  Route
+} from 'react-router-dom'
 
 import Game from './Game'
-// Import Score Component
 
-const App = () => {
-  return (
-    <>
-      <h1>Who wants to be a Programmer</h1>
-      <p>Hello, testing!</p>
-      {/* Insert Score Component */}
-      {/* <Route path="/" component={Game} /> */}
-    </>
-  )
+import questionsData from '../../data/questionData'
+
+class App extends React.Component {
+  render () {
+    return (
+      <Router>
+        <>
+          <h1>Who wants to be a Programmer</h1>
+          <Route path="/" render={() => {
+            return (
+              <>
+              <Game data={questionsData}/>
+              </>
+            )
+          }} />
+        </>
+      </Router>
+    )
+  }
 }
 
 export default App
