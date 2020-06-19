@@ -7,10 +7,15 @@ import Game from './Game'
 const App = () => {
   return (
     <>
+      <div className='leftcol'>
+
+      </div>
+      <Score />
+      <div className='rightcol'>
       <h1>Who wants to be a Programmer</h1>
-      <p>Hello, testing!</p>
-      {/* Insert Score Component */}
-      {/* <Route path="/" component={Game} /> */}
+        <Title />
+        <Game />
+      </div>
     </>
   )
 }
