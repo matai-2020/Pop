@@ -3,7 +3,7 @@ import React from 'react'
 import Score from './Score'
 
 class Game extends React.Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
 
     this.state = {
@@ -27,18 +27,23 @@ class Game extends React.Component {
     return this.state.level
   }
 
-  render () {
+  render() {
     const stage = this.props.data[this.state.level]
     return (
-      <div>
-        <Score currentLevel={this.state.level} />
 
-        <h1>{stage.question}</h1>
-        {stage.choices.map((choice, i) => {
-          return <div className="choices" key={i} onClick={() => this.nextLevel(choice)} to="/">
-            {choice}
+      <div className='bodywrap'>
+        <Score currentLevel={this.state.level} />
+        <div className='gameboard'>
+        <div class="title"><img src="./ourlogo.jpg"/></div>
+          <div className='question'><h1>{stage.question}</h1></div>
+          <div className='choices'>
+            {stage.choices.map((choice, i) => {
+              return <div className="choice" key={i} onClick={() => this.nextLevel(choice)} to="/">
+                {choice}
+              </div>
+            })}
           </div>
-        })}
+        </div>
       </div>
     )
   }

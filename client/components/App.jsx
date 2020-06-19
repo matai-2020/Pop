@@ -13,7 +13,6 @@ class App extends React.Component {
     return (
       <Router>
         <>
-          <h1>Who wants to be a Programmer</h1>
           <Route path="/" render={() => {
             return (
               <>

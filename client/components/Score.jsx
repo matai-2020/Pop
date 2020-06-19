@@ -105,6 +105,7 @@ class Score extends React.Component {
             : <h5>$1,000.00</h5>
           }
         </div>
+
       </div>
     )
   }
