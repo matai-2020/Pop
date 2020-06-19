@@ -1,10 +1,25 @@
+import React from 'react'
 
-import React, { Component } from 'react'
-class Score extends Component {
+class Score extends React.Component {
+ state = {
+   style: {
+     backgroundColor: 'grey'
+   }
+ }
+
+  changeColor = () => {
+    this.setState({
+      style: {
+        backgroundColor: 'green'
+      }
+    })
+  }
+
   render () {
     return (
       <div>
-        <h2>$1,000,000.00</h2>
+        <div style={ this.state.style }> <h2>$1,000,000.00</h2> </div>
+
         <h3>$500,000.00</h3>
         <h3>$250,000.00</h3>
         <h3>$125,000.00</h3>
@@ -18,4 +33,5 @@ class Score extends Component {
     )
   }
 }
+
 export default Score
