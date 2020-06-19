@@ -1,5 +1,7 @@
 import React from 'react'
 
+import Score from './Score'
+
 class Game extends React.Component {
   constructor(props) {
     super(props)
@@ -10,29 +12,27 @@ class Game extends React.Component {
   }
 
   nextLevel = (choice) => {
+    // User reaches tenth
+
     if (this.props.data[this.state.level].answer === choice) {
       this.setState({
         level: this.state.level + 1
       })
     }
+
+    // user loses
+  }
+
+  currentLevel = () => {
+    return this.state.level
   }
 
   render() {
     const stage = this.props.data[this.state.level]
     return (
+
       <div className='bodywrap'>
-        <div className='score'>
-          <div className='level'></div>
-          <div className='level'></div>
-          <div className='level'></div>
-          <div className='level'></div>
-          <div className='level'></div>
-          <div className='level'></div>
-          <div className='level'></div>
-          <div className='level'></div>
-          <div className='level'></div>
-          <div className='level'></div>
-        </div>
+        <Score currentLevel={this.state.level} />
         <div className='gameboard'>
         <div class="title"><img src="./ourlogo.jpg"/></div>
           <div className='question'><h1>{stage.question}</h1></div>
