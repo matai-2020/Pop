@@ -1,18 +1,52 @@
 import React from 'react'
-import { Route } from 'react-router-dom'
 
-import Question from './Question'
-import Answers from './Answers'
+class Game extends React.Component {
+  constructor(props) {
+    super(props)
 
-import questions from '../../data/questionData'
+    this.state = {
+      level: 0
+    }
+  }
 
-const Game = () => {
-  return (
-    <>
-      <Route path="/" component={Question} />
-      <Route path="/" component={Answers} />
-    </>
-  )
+  nextLevel = (choice) => {
+    if (this.props.data[this.state.level].answer === choice) {
+      this.setState({
+        level: this.state.level + 1
+      })
+    }
+  }
+
+  render() {
+    const stage = this.props.data[this.state.level]
+    return (
+      <div className='bodywrap'>
+        <div className='score'>
+          <div className='level'></div>
+          <div className='level'></div>
+          <div className='level'></div>
+          <div className='level'></div>
+          <div className='level'></div>
+          <div className='level'></div>
+          <div className='level'></div>
+          <div className='level'></div>
+          <div className='level'></div>
+          <div className='level'></div>
+        </div>
+        <div className='gameboard'>
+        <div class="title"><img src="./ourlogo.jpg"/></div>
+          <div className='question'><h1>{stage.question}</h1></div>
+          <div className='choices'>
+            {stage.choices.map((choice, i) => {
+              return <div className="choice" key={i} onClick={() => this.nextLevel(choice)} to="/">
+                {choice}
+              </div>
+            })}
+          </div>
+        </div>
+      </div>
+    )
+  }
 }
 
 export default Game

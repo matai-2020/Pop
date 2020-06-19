@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Question = () => {
+const Question = props => {
   return (
     <>
-      <h2>Insert Question Here</h2>
+      <h2>{props.question}</h2>
     </>
   )
 }
